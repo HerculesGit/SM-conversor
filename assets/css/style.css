@@ -1,7 +1,7 @@
 
 .content-center {
-  width: 100%;
-  max-width: 300px;
+  height: 400px;
+  width: 330px;
 
   /* centralizando */
   margin: auto;
@@ -9,16 +9,63 @@
 }
 
 .content-center input {
-  width: 100%;
+
+  color:white;
+  width: 90%;
   padding: 10px, 5px;
   outline: none;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #707070;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.content-center .sign-up {
+  color: #ffffff;
+  font: 1em sans-serif;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.content-center button {
+  background-color: #2EBC4F;
+  color: #ffffff;
+  border: none;
+  border-radius: 2px;
+  max-width: 179px;
+  min-width: 179px;
+  max-height: 55px;
+  min-height: 30px;
+  margin-top: 40px
+}
+
+.content-center img {
+  max-width: 110px;
+  max-height: 110px;
+}
+
+.content-center {
+  background-color: #323232;
 }
 
 section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   padding: 10px;
   /* border-style: solid; deixa a bordar liza, podemos testar outros */
   border: 1px solid #DEE2E6;
   border-color: #CCC; /*uma corzinha*/
+}
+
+section .text-center, .form, .sign-up{
+  min-height: 116px;
+}
+
+section .text-center {
+  margin-top: 30px;
 }
 
 .content-center img {
@@ -31,4 +78,14 @@ section {
 
 #form-login {
   text-align: center
+}
+
+/*Acoes de botoes*/
+.content-center button:hover {
+  cursor: pointer;
+}
+
+.content-center .sign-up strong:hover {
+  color: #2EBC4F;
+  cursor: pointer;
 }
