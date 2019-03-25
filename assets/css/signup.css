@@ -1,0 +1,20 @@
+section {
+    display: flex;
+    margin: auto;
+    width: 600px;
+    height: 400px;
+    background-color: #2EBC4F;
+  }
+  
+  section .divide-left {
+    width: 300px;
+    height: 400px;
+    background-color: #323232; 
+  }
+  
+  
+  section .divide-right {
+    width: 300px;
+    height: 400px;
+    background-color: aqua;
+  }
