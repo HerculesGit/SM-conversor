@@ -1,0 +1,34 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 500px;
+    background-color: aqua;
+}
+
+.box {
+    flex: 1;
+    max-width: 400px;
+    max-height: 50px;
+    background-color: black;
+}
+
+.box label {
+    color: white;
+}
+
+.choose-image {
+    flex: 2;
+    display: flex;
+}
+
+.form {
+    flex: 1;
+}
+
+.choose-image img {
+    max-width: 120px;
+    max-height: 120px;
+    padding: 20px;
+}
