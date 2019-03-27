@@ -11,42 +11,42 @@
 
 </head>
 <body>
-    <section>
-        <div class="container">
 
-            <!-- Barra preta -->
-            <div class="box">
-                <!-- <button id="close"></button> -->
-                <label>Alterar imagem</label>
+    <div class="container">
+
+        <!-- Barra preta -->
+        <div class="box">
+            <!-- <button id="close"></button> -->
+            <label>Alterar imagem</label>
+        </div>
+
+
+        <!-- Local para a imagem / aqui é a parte de cima do container -->
+        <div class="container-image-area">
+            <div class="image">
+                <img src="assets/images/user.png"/>
             </div>
 
-
-            <!-- Local para a imagem / aqui é a parte de cima do container -->
-            <div class="choose-image">
-                <div class="image">
-                    <img src="assets/images/user.png"/>
-                </div>
-
-                <div class="button-image">
-                    <input id="add-file" type="file" alt="Mudar imagem">
-                    <button id="btn-remove" type="button">Remover foto</button>
-                </div>
+            <div class="div-choose-image">
+                <input id="add-file" type="file" name="Mudar foto">
+                <button id="btn-remove" type="button">Remover foto</button>
             </div>
+        </div>
 
-            <!-- parte com os campos e botao de confirmar alteração -->
-            <div class="form">
-                <form id="form-login" action="/login" method="POST">
-                    <div><input id="nickname" type="text" placeholder="Nick Name" ></div>
-                    <div><input id="password" type="password" placeholder="Senha" ></div>
-                    <div><input id="confirm-password" type="password" placeholder="Confirmar Senha" ></div>
-                    <div><input id="email" type="email" placeholder="aknds@ansdnson" ></div>
-                    <div><button id="btn-submit">Confirmar Alteração</button></div>
-            
-                </form>
-
-            </div>
+        <!-- parte com os campos e botao de confirmar alteração -->
+        <div class="container-form">
+            <form id="form-login" action="/login" method="POST">
+                <div><input id="nickname" type="text" placeholder="Nick Name" ></div>
+                <div><input id="password" type="password" placeholder="Senha" ></div>
+                <div><input id="confirm-password" type="password" placeholder="Confirmar Senha" ></div>
+                <div><input id="email" type="email" placeholder="aknds@ansdnson" ></div>
+                <div><button id="btn-submit">Confirmar Alteração</button></div>
+        
+            </form>
 
         </div>
-    </section>
+
+    </div>
+
 </body>
 </html>
