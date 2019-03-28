@@ -33,21 +33,56 @@ header {
 }
 
 .div_left, .div_right{
-    width: 100%;
+    border: solid #515151 1px;
+    width: 50%;
     height: 100%;
-    background-color: chocolate;
+    /* background-color: chocolate; */
 }
 
-.div_right {
-    background-color: chartreuse;
+.div_left {
+    /* background-color: chartreuse; */
+}
+.label_and_select {
+    margin-top: 10px;
+}
+.label_and_result {
+    display: flex;
+    flex-direction: column;
 }
 
 /* passo a passo */
 .step-scroll {
     width: 100%;
-    height: 80px;
-    overflow-y: auto;
-    overflow-x: auto;
+    height: 50%;
+    overflow-y: scroll;
+    overflow-x: scroll;
     font-size: 18px;
-    direction: ltr;
+}
+
+.step-scroll p {
+    margin-left: 10px;
+}
+
+label {
+    margin-left: 10px;
+}
+
+select {
+    border-radius: 4px;
+    width: 30%;
+    border: 1px solid #707070;
+    margin: 10px;
+    padding: .5rem;
+    font-size: 1em
+}
+
+
+input, #label-result-value{
+    border-radius: 4px;
+    width: 50%;
+    border: 1px solid #707070;
+    margin: 10px;
+    padding: .5rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5em
 }
