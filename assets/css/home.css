@@ -1,0 +1,22 @@
+/* header */
+header {
+    position: fixed;
+    background-color: #35495E;
+    top: 0%;
+    left: 0%;
+    height: 10%;
+    width: 100%;
+}
+
+
+/* container principal - raiz */
+.content-container{
+    border: solid 1px #515151;
+    position:absolute;
+	top: 55%;
+	left: 50%;
+	width: 95%;
+    height: 80%;
+    transform: translate(-50%, -50%);
+    filter: alpha(opacity=65);
+}
