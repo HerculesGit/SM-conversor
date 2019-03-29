@@ -8,6 +8,13 @@ header {
     width: 100%;
 }
 
+.avatar {
+    width: 3rem;
+    height: 3rem;
+    margin: 10px;
+    margin-right: 15px;
+    float: right;
+}
 
 /* Fonte */
 * {
@@ -95,4 +102,12 @@ input, #label-result-value{
     padding: .5rem;
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.5em
+}
+
+/* ============== eventos - efeitos - clicks ============== */
+.avatar:hover {
+    cursor: pointer;
+}
+select:hover {
+    cursor: pointer;
 }
