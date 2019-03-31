@@ -1,46 +1,60 @@
 
 // Pegar o tipo de conversão (pelo select). EX: Decimal - Binário
 document.querySelector('#field-value').addEventListener('input', e=>{
+    if(!document.querySelector('#field-value').value == '') {
+        toConvert()
+    } else {
+        setLabelValue('0')
+    }
+})
+
+toConvert =() => {
+
     let select = document.querySelector('select')
-    let selectedIndex = select.options[select.selectedIndex].text
+    let selectedIndex = select.options[select.selectedIndex].text.toUpperCase()
 
     const d_b = 'DECIMAL - BINÁRIO'
     const b_d = 'BINÁRIO - DECIMAL'
     const d_h = 'DECIMAL - HEXADECIMAL'
     const h_d = 'HEXADECIMAL - DECIMAL'
 
-    
-    console.log('shazam' + selectedIndex)
-    //console.log(selectedIndex.toUpperCase() === d_b)
     let result = 0;
-    if (selectedIndex.toUpperCase() === d_b){
-        result = decimalToBinary(getInputValue())
-        let valueInput = getInputValue()
-        setLabelValue(decimalToBinary(parseInt(valueInput)))
 
-    } else if (selectedIndex.toUpperCase() === b_d){
-        result = binaryToDecimal(getInputValue())
-        setLabelValue(binaryToDecimal(getInputValue()))
-    } else if (selectedIndex.toUpperCase() === d_h) {
-        // decimal para hexadecimal
-        result = decimalToHexadecimal(parseInt(getInputValue()))
-        setLabelValue(result)
-        
-    } else if (selectedIndex.toUpperCase() === h_d) {
-        // hexadecimal para decimal 
-        result = hexadecimalToDecimal(getInputValue())
-        setLabelValue(result)
+    try {
+
+        switch (selectedIndex) {
+
+            // decimal - binario
+            case d_b:
+                result = decimalToBinary(getInputValue())
+                setLabelValue(result)
+                break;
+
+            // binario - decimal
+            case b_d:
+                result = binaryToDecimal(getInputValue())
+                setLabelValue(binaryToDecimal(getInputValue()))
+                break;
+
+            // decimal hexadecimal
+            case d_h:
+                result = decimalToHexadecimal(getInputValue())
+                setLabelValue(result)  
+                break;
+
+            // hexadecimal - decimal
+            case h_d: 
+                result = hexadecimalToDecimal(getInputValue())
+                setLabelValue(result)
+                break;
+
+            default:
+                break;
+        }
+    } catch (e){
+        setLabelValue(e)
     }
-    
-})
-
-// Converter o valor
-
-
-// Atualizar a label
-
-// Setar Tutorial
-
+}
 
 // 
 function getInputValue(){
@@ -55,27 +69,31 @@ function setLabelValue(value){
 // funções para converter
 
 // ================ DECIMAL E BINÁRIO ================ 
-function decimalToBinary (value) {
+decimalToBinary = (value) => {
     if(isNumber(value)){
-        let binary = value.toString(2)
+        let binary = parseInt(value).toString(2)
         return binary
     }
-    return -1
+    throw 'Error'
 }
 
-function binaryToDecimal(value){
-    let decimal = parseInt(value, 2)
-    return decimal
+binaryToDecimal=(value)=>{
+    if(isBinary(value)){
+        let decimal = parseInt(value, 2)
+        return decimal
+    }
+    throw 'Error'
 }
 
 // ================ DECIMAL E HEXADECIMAL ================ 
 function decimalToHexadecimal(value){
     if(isNumber(value)){
-        let hexadecimal = value.toString(16)
+        console.log(value+'<>' + isNumber(value))
+        let hexadecimal = parseInt(value).toString(16)
         return hexadecimal
 
     }
-    return -1
+    throw 'Error'
 }
 
 function hexadecimalToDecimal(value){
@@ -84,7 +102,7 @@ function hexadecimalToDecimal(value){
         let decimal = parseInt(value, 16)
         return decimal 
     }
-    return -1
+    throw 'Error'
 }
 
 // ================ DECIMAL E OCTAL ================ 
@@ -130,4 +148,8 @@ function isBinary (value){
     }
 
     return true
+}
+
+function isEmpty(){
+    return (getInputValue() === '')
 }
