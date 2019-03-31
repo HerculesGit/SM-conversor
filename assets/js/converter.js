@@ -6,6 +6,8 @@ document.querySelector('#field-value').addEventListener('input', e=>{
 
     const d_b = 'DECIMAL - BINÁRIO'
     const b_d = 'BINÁRIO - DECIMAL'
+    const d_h = 'DECIMAL - HEXADECIMAL'
+    const h_d = 'HEXADECIMAL - DECIMAL'
 
     
     console.log('shazam' + selectedIndex)
@@ -19,7 +21,16 @@ document.querySelector('#field-value').addEventListener('input', e=>{
     } else if (selectedIndex.toUpperCase() === b_d){
         result = binaryToDecimal(getInputValue())
         setLabelValue(binaryToDecimal(getInputValue()))
-    } 
+    } else if (selectedIndex.toUpperCase() === d_h) {
+        // decimal para hexadecimal
+        result = decimalToHexadecimal(parseInt(getInputValue()))
+        setLabelValue(result)
+        
+    } else if (selectedIndex.toUpperCase() === h_d) {
+        // hexadecimal para decimal 
+        result = hexadecimalToDecimal(getInputValue())
+        setLabelValue(result)
+    }
     
 })
 
@@ -88,7 +99,6 @@ function isHexadecimal(value){
     for (let x = 0; x < hexadecimal.length; x++) {
         for(let j=0; j < letters.length; j++) {
             if (hexadecimal[x].toUpperCase() === letters[j].toUpperCase()){
-                console.log('achou:' + hexadecimal[x] + ' - ' + letters[j])
                 return true          
             }
         }
