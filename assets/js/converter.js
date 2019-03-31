@@ -1,4 +1,8 @@
 
+var d_b = 'DECIMAL - BINÁRIO'
+var b_d = 'BINÁRIO - DECIMAL'
+var d_h = 'DECIMAL - HEXADECIMAL'
+var h_d = 'HEXADECIMAL - DECIMAL'
 // Pegar o tipo de conversão (pelo select). EX: Decimal - Binário
 document.querySelector('#field-value').addEventListener('input', e=>{
     if(!document.querySelector('#field-value').value == '') {
@@ -11,18 +15,43 @@ document.querySelector('#field-value').addEventListener('input', e=>{
 document.querySelector('select').addEventListener('change', event=>{
     let type= document.querySelector('option:checked').text
     setLabelTitleAndResult(type)
+    setPassoAPasso()
 })
 
+setPassoAPasso =()=>{
+    let type= document.querySelector('option:checked').text
+    let passoAPasso = document.querySelector('.step-scroll')
+    
+    switch (type.toUpperCase()) {
+        // arquivo 1 (decimal - binario)
+        case d_b:
+            passoAPasso.innerHTML = `Explicação ${d_b}`
+            break;
+
+        // arquivo 2 (binario - decimal)
+        case b_d:
+            passoAPasso.innerHTML = `Explicação ${b_d}`
+            break;
+        
+        // arquivo 3 (decimal - hexadecimal)
+        case d_h:
+            passoAPasso.innerHTML = `Explicação ${d_h}`
+            break;
+
+        // arquivo 4 (hexadecimal - decimal)
+        case h_d:
+            passoAPasso.innerHTML = `Explicação ${h_d}`
+        break;
+
+        default:
+            break;
+    }
+}
 
 toConvert =() => {
 
     let select = document.querySelector('select')
     let selectedIndex = select.options[select.selectedIndex].text.toUpperCase()
-
-    const d_b = 'DECIMAL - BINÁRIO'
-    const b_d = 'BINÁRIO - DECIMAL'
-    const d_h = 'DECIMAL - HEXADECIMAL'
-    const h_d = 'HEXADECIMAL - DECIMAL'
 
     let result = 0;
 
