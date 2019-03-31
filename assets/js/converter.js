@@ -1,23 +1,45 @@
-// Pegar o tipo de conversão (pelo select). EX: Decimal - Binário
-let select = document.querySelector('select')
-let selectedIndex = select.options[select.selectedIndex].text
 
-const d_b = 'DECIMAL - BINÁRIO'
-const b_d = 'BINÁRIO - DECIMAL'
+// Pegar o tipo de conversão (pelo select). EX: Decimal - Binário
+document.querySelector('#field-value').addEventListener('input', e=>{
+    let select = document.querySelector('select')
+    let selectedIndex = select.options[select.selectedIndex].text
+
+    const d_b = 'DECIMAL - BINÁRIO'
+    const b_d = 'BINÁRIO - DECIMAL'
+
+    
+    console.log('shazam' + selectedIndex)
+    //console.log(selectedIndex.toUpperCase() === d_b)
+    let result = 0;
+    if (selectedIndex.toUpperCase() === d_b){
+        result = decimalToBinary(getInputValue())
+        let valueInput = getInputValue()
+        setLabelValue(decimalToBinary(parseInt(valueInput)))
+
+    } else if (selectedIndex.toUpperCase() === b_d){
+        result = binaryToDecimal(getInputValue())
+        setLabelValue(binaryToDecimal(getInputValue()))
+    } 
+    
+})
 
 // Converter o valor
-if (selectedIndex.toUpperCase === d_b){
-    console.log(d_b)
-
-} else if (selectedIndex.toUpperCase === b_d){
-    console.log(b_d)
-}
 
 
 // Atualizar a label
 
 // Setar Tutorial
 
+
+// 
+function getInputValue(){
+    return document.querySelector('#field-value').value
+}
+
+function setLabelValue(value){
+    let textLabel = document.querySelector('#label-result-value')
+    textLabel.innerHTML = value
+}
 
 // funções para converter
 
