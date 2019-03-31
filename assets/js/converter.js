@@ -8,6 +8,12 @@ document.querySelector('#field-value').addEventListener('input', e=>{
     }
 })
 
+document.querySelector('select').addEventListener('change', event=>{
+    let type= document.querySelector('option:checked').text
+    setLabelTitleAndResult(type)
+})
+
+
 toConvert =() => {
 
     let select = document.querySelector('select')
@@ -33,7 +39,7 @@ toConvert =() => {
             // binario - decimal
             case b_d:
                 result = binaryToDecimal(getInputValue())
-                setLabelValue(binaryToDecimal(getInputValue()))
+                setLabelValue(result)
                 break;
 
             // decimal hexadecimal
@@ -64,6 +70,22 @@ function getInputValue(){
 function setLabelValue(value){
     let textLabel = document.querySelector('#label-result-value')
     textLabel.innerHTML = value
+}
+
+setLabelTitleAndResult =(type)=> {
+    let labelValue = document.querySelector('#label-value')
+    let labelResult = document.querySelector('#label-result')
+
+    // const d_b = 'DECIMAL - BINÁRIO'
+    let arrayType = type.split('-')
+    let from = arrayType[0]
+    let to = arrayType[1]
+
+    from = from.substring(0,from.length-1)
+    to = to.substring(1)
+
+    labelValue.innerHTML = from
+    labelResult.innerHTML = to
 }
 
 // funções para converter
