@@ -75,6 +75,27 @@ function isHexadecimal(value){
     return false
 }
 
-function isBinary (){
-    
+function isBinary (value){
+    let binary = value
+    let letters = ['a','b','c', 'd', 'e', 'f']
+
+    if(isNaN(value)){
+        return false
+    }
+
+    for (let i = 0; i< value.length; i++){
+        if (value[i] < 0 || value[i] > 1){
+            return false
+        }
+    }
+
+    for (let x = 0; x < binary.length; x++) {
+        for(let j=0; j < letters.length; j++) {
+            if (binary[x].toUpperCase() === letters[j].toUpperCase()){
+                return false        
+            }
+        }
+    }
+
+    return true
 }
