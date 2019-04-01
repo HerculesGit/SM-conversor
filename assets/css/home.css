@@ -59,7 +59,22 @@ header {
 }
 
 .label_and_select {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     margin-top: 10px;
+}
+
+.div_t {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.div_b {
+    margin-top: 18px;
+    width: 100%;
 }
 
 .label_and_result {
@@ -86,7 +101,7 @@ label {
 
 select {
     border-radius: 4px;
-    width: 35%;
+    /* width: 50%; */
     border: 1px solid #707070;
     margin: 10px;
     padding: .5rem;
@@ -96,7 +111,7 @@ select {
 
 input, #label-result-value{
     border-radius: 4px;
-    width: 50%;
+    /* width: 50%; */
     border: 1px solid #707070;
     margin: 10px;
     padding: .5rem;
@@ -110,4 +125,52 @@ input, #label-result-value{
 }
 select:hover {
     cursor: pointer;
+}
+
+/* responsividade */
+@media only screen and (max-device-width: 945px){
+    .label_and_select {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+    .div_b {
+        margin-top: 0px;
+    }
+}
+@media only screen and (max-device-width: 500px){
+    .content-container {
+        flex-direction: column-reverse;
+        border: none;
+    }
+    select {
+        margin-top: 0px;
+        width: 95%;
+    }
+    
+    input, #label-result-value{
+        margin: 10px;
+        padding: .5rem;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1em
+    }
+    .div_right {
+        width: 100%;
+    }
+    .div_left {
+        width: 100%;
+    }
+
+    .div_t {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .div_b {
+        margin-top: 18px;
+        width: 100%;
+    }
 }

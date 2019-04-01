@@ -29,22 +29,27 @@
 
                     <!-- div valor de entrada e escolha do tipo de conversao -->
                     <div class="label_and_select">
-                        <label id="label-value">Binário<br></label>
-                        <input id="field-value">
-
-                        <!-- tipos de conversoes -->
-                        <select>
-                            <option value="d-b">Decimal - Binário</option>
-                            <option value="b-d">Binário - Decimal</option>
-                            <option value="h-d">Hexadecimal - Decimal</option>
-                            <option value="d-h">Decimal - Hexadecimal</option>
-                        </select>
+                        
+                        <div class="div_t"> <!-- top -->
+                            <label id="label-value">Binário</label>
+                            <input id="field-value">
+                        </div>
+                        
+                        <div class="div_b"> <!-- bottom --> 
+                            <!-- tipos de conversoes -->
+                            <select>
+                                <option value="d-b">Decimal - Binário</option>
+                                <option value="b-d">Binário - Decimal</option>
+                                <option value="h-d">Hexadecimal - Decimal</option>
+                                <option value="d-h">Decimal - Hexadecimal</option>
+                            </select>
+                        </div>
 
                     </div>
                     
                     <!-- div para resultado  -->
                     <div class="label_and_result">
-                        <label id="label-result">Decimal<br></label>
+                        <label id="label-result">Decimal</label>
                         <label id="label-result-value">101010</label>
                     </div>
                 <!-- </form> -->
