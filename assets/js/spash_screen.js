@@ -1,5 +1,9 @@
 
 
+goToPage=()=>{
+    window.location.href = 'home.html'
+}
+
 animationProgressBar =()=>{
     let bar = document.querySelector('#bar')
     let body = document.querySelector('body')
@@ -25,9 +29,7 @@ animationProgressBar =()=>{
                 fadeOut('.container-bar-progress', 1.2)
 
                 setTimeout(() => {
-                    // fadeOut('.container-bar-progress')
-                    container.innerHTML = ''
-                    container.className = ''
+                    goToPage()
                 }, 1000);
                 
 
