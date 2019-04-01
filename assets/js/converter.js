@@ -204,3 +204,10 @@ function isBinary (value){
 function isEmpty(){
     return (getInputValue() === '')
 }
+
+// load
+setDefaultState=()=>{
+    setPassoAPasso()
+}
+
+setDefaultState()
