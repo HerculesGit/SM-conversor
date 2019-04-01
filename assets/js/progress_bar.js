@@ -3,16 +3,24 @@
 animationProgressBar =()=>{
     let bar = document.querySelector('#bar')
     let body = document.querySelector('body')
+    let percent = document.querySelector('body a')
+
     body.style.backgroundColor = '#323232'
 
     let width = 1
 
     let idInterval = setInterval(() => {
         if (width <= 50){
+
             width+= getRandomInt(1,5)
+            if(width > 50){
+                width = 50
+            }
             bar.style.width = width + '%'
+            percent.textContent = (width*2) + '%'
             console.log('size-max' + width)
         } else {
+            bar.style.width = width + '%'
             stopInterval(idInterval)
             console.log('parou')
         }
