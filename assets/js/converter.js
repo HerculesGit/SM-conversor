@@ -3,6 +3,11 @@ var d_b = 'DECIMAL - BINÁRIO'
 var b_d = 'BINÁRIO - DECIMAL'
 var d_h = 'DECIMAL - HEXADECIMAL'
 var h_d = 'HEXADECIMAL - DECIMAL'
+
+var url_d_b = 'https://www.youtube.com/embed/a8EaaCfa9hk'
+var url_b_d = 'https://www.youtube.com/embed/UTAeDoRIHaA'
+
+
 // Pegar o tipo de conversão (pelo select). EX: Decimal - Binário
 document.querySelector('#field-value').addEventListener('input', e=>{
     if(!document.querySelector('#field-value').value == '') {
@@ -26,11 +31,13 @@ setPassoAPasso =()=>{
         // arquivo 1 (decimal - binario)
         case d_b:
             passoAPasso.innerHTML = `Explicação ${d_b}`
+            changeVideo(url_d_b)
             break;
 
         // arquivo 2 (binario - decimal)
         case b_d:
             passoAPasso.innerHTML = `Explicação ${b_d}`
+            changeVideo(url_b_d)
             break;
         
         // arquivo 3 (decimal - hexadecimal)
@@ -203,6 +210,11 @@ function isBinary (value){
 
 function isEmpty(){
     return (getInputValue() === '')
+}
+
+
+changeVideo=(url)=>{
+    document.querySelector('iframe').src = url
 }
 
 // load

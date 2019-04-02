@@ -9,11 +9,11 @@ header {
 }
 
 .avatar {
-    width: 3rem;
-    height: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
     margin: 10px;
-    margin-right: 15px;
-    float: right;
+    margin-left: 2rem;
+    float: left;
 }
 
 /* Fonte */
@@ -127,6 +127,11 @@ select:hover {
     cursor: pointer;
 }
 
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
 /* responsividade */
 @media only screen and (max-device-width: 945px){
     .label_and_select {
@@ -142,9 +147,31 @@ select:hover {
 }
 @media only screen and (max-device-width: 500px){
     .content-container {
-        flex-direction: column-reverse;
+        display: block;
+        
+        border: none;
+        /* overflow: scroll; */
+    }
+
+    iframe {
+        align-self: center;
+        width: 100%;
+        height: 60%;
+        background-color: black
+    }
+    
+    .div_left {
+        display: flex;
+        justify-content: start;
+        align-items: flex-end;
         border: none;
     }
+
+    header {
+        position: absolute;
+        background-color: black;
+    }
+
     select {
         margin-top: 0px;
         width: 95%;
