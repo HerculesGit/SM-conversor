@@ -1,0 +1,27 @@
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+body {
+    background-image: url('../images/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body h1 {
+    font-size: 3rem;
+}
+
+.content-wrap {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact {
+    background-color: #35495E;
+    width: 15rem;
+    height: 20rem;
+    text-align: center;
+}
