@@ -53,6 +53,7 @@ setPassoAPasso =()=>{
         default:
             break;
     }
+    toConvert()
 }
 
 toConvert =() => {
