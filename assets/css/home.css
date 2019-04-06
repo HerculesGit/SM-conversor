@@ -116,6 +116,7 @@ select {
 
 
 input, #label-result-value{
+    background-color: #35495E;
     border-radius: 4px;
     /* width: 50%; */
     border: 1px solid #707070;

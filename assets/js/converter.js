@@ -23,6 +23,15 @@ document.querySelector('select').addEventListener('change', event=>{
     setPassoAPasso()
 })
 
+
+clear=()=>{
+    let label = document.querySelector('#label-result-value')
+    let inputField = document.querySelector('#field-value')
+    label.innerHTML = "0"
+    inputField.value = ""
+
+}
+
 setPassoAPasso =()=>{
     let type= document.querySelector('option:checked').text
     let passoAPasso = document.querySelector('.step-scroll')
@@ -53,7 +62,7 @@ setPassoAPasso =()=>{
         default:
             break;
     }
-    toConvert()
+    clear()
 }
 
 toConvert =() => {
