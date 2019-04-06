@@ -3,18 +3,114 @@
     font-size: 1rem;
 }
 
+.row p {
+    font-weight: 500;
+    font-size: 20px;
+    /* font-size: 1.1rem; */
+}
+
+#input-value {
+    font-size: 1.6rem;
+}
+#label-value {
+    font-size: 2.3rem;
+    color: #1CBC9D;
+}
+
+
 /* card-top-conversor */
 .content-container-top {
     display: flex;
     flex-direction: row;
     width: 1130px;
-    height: 950px;
+    height: 550px;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    /* background-color: #707070; */
 }
 
 .card-top-conversor {
-    width: 400px;
-    height: 950px;
-    font-family: 200px;
-    background-color: bisque;
+    display: flex;
+    flex-direction: column;
 
+    width: 400px;
+    font-family: 200px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px gray;
+}
+
+.input-display {
+    flex: 1;
+    /* background-color: brown; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-top: 40px;
+}
+
+
+#select-type {
+    border-radius: 4px;
+    border: 1px solid #707070;
+    padding: .5rem;
+    background-color: #707070;
+    color: #fff;
+}
+
+.input-out, .conversion-type, #select-type, #input-value  {
+    width: 90%;
+}
+
+
+/* Label e border  */
+#input-value {
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #232323;
+    box-shadow: 0 1px 0 0 #232323;
+}
+
+.input-out {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+#label-value {
+    margin-top: 10px;
+}
+
+.buttons-letters {
+    flex: 2;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.row {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* background-color: aqua; */
+}
+
+.row div {
+    width: 100%;
+    text-align: center;
+    margin: .5rem;
+    border-radius: 15px;
+}
+
+.row div:hover {
+    background-color: #1CBC9D;
+    cursor: pointer;
+}
+
+.row .l {
+    color: #1CBC9D;
+    background-color: transparent;
 }
