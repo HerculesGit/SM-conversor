@@ -1,0 +1,20 @@
+* {
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+}
+
+/* card-top-conversor */
+.content-container-top {
+    display: flex;
+    flex-direction: row;
+    width: 1130px;
+    height: 950px;
+}
+
+.card-top-conversor {
+    width: 400px;
+    height: 950px;
+    font-family: 200px;
+    background-color: bisque;
+
+}
