@@ -1,0 +1,26 @@
+header{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+}
+
+.circle {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+.div-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.main-header {
+    background-color: #707070;
+    box-shadow: 1px 1px 0px gray;
+}
