@@ -12,13 +12,14 @@ header{
     border-radius: 50%;
     display: inline-block;
 }
-.div-header{
+
+/* .div-header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-}
+} */
 
 .main-header {
     background-color: #707070;
