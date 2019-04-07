@@ -1,23 +1,23 @@
 
-var d_b = 'DECIMAL - BINÁRIO'
-var b_d = 'BINÁRIO - DECIMAL'
-var d_h = 'DECIMAL - HEXADECIMAL'
-var h_d = 'HEXADECIMAL - DECIMAL'
+var d_b = 'd-b'
+var b_d = 'b-d'
+var d_h = 'd-h'
+var h_d = 'h-d'
 
 var url_d_b = 'https://www.youtube.com/embed/a8EaaCfa9hk'
 var url_b_d = 'https://www.youtube.com/embed/UTAeDoRIHaA'
 
 let valueButton
-getValueInput=()=>{
-    document.querySelector('#input-value').value
+getInputValue=()=>{
+    return document.querySelector('#input-value').value
 }
 
 getLabelDisplayValue=()=>{
-    document.querySelector('#label-value').innerHTML
+    return document.querySelector('#label-value').innerHTML
 }
 
 getConvertType=()=>{
-    document.querySelector('#select-type').value
+    return document.querySelector('#select-type').value
 }
 
 getClickOnPressedButton=()=>{
@@ -30,6 +30,67 @@ getClickOnPressedButton=()=>{
     }
 }
 
+ // ============================================
+// Pegar valor, verificar se ele é válido conforme o tipo de conversão
+validarEntrada=()=> {
+    let typeConvert = getConvertType()
+    let inputValue = getInputValue()
+    if(typeConvert === d_b || typeConvert == d_h) {
+        return isNumber(inputValue)
+    } else if (typeConvert == b_d) {
+        return isBinary(inputValue)
+    } else if (typeConvert === h_d){
+        return isHexadecimal(inputValue)
+    }
+    return false;
+}
+
+isNumber=(value)=>{
+    return !isNaN(value)
+}
+
+isBinary =(value)=>{
+    let binary = value
+    let letters = ['a','b','c', 'd', 'e', 'f']
+
+    if(isNaN(value)){
+        return false
+    }
+
+    for (let i = 0; i< value.length; i++){
+        if (value[i] < 0 || value[i] > 1){
+            return false
+        }
+    }
+
+    for (let x = 0; x < binary.length; x++) {
+        for(let j=0; j < letters.length; j++) {
+            if (binary[x].toUpperCase() === letters[j].toUpperCase()){
+                return false        
+            }
+        }
+    }
+
+    return true
+}
+
+isHexadecimal=(value)=>{
+    let hexadecimal = value
+    let letters = ['a','b','c', 'd', 'e', 'f']
+    for (let x = 0; x < hexadecimal.length; x++) {
+        for(let j=0; j < letters.length; j++) {
+            if (hexadecimal[x].toUpperCase() === letters[j].toUpperCase()){
+                return true          
+            }
+        }
+    }
+
+    return false
+}
+
+isEmptyInputValue=()=>{
+    return getInputValue() === ''
+}
 
 // Pegar o tipo de conversão (pelo select). EX: Decimal - Binário
 document.querySelector('#input-value').addEventListener('input', e=>{
@@ -40,6 +101,7 @@ document.querySelector('#input-value').addEventListener('input', e=>{
     }
 })
 
+/*
 document.querySelector('select').addEventListener('change', event=>{
     let type= document.querySelector('option:checked').text
     setLabelTitleAndResult(type)
@@ -256,3 +318,5 @@ setDefaultState=()=>{
 }
 
 setDefaultState()
+
+*/
