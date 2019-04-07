@@ -7,13 +7,36 @@ var h_d = 'HEXADECIMAL - DECIMAL'
 var url_d_b = 'https://www.youtube.com/embed/a8EaaCfa9hk'
 var url_b_d = 'https://www.youtube.com/embed/UTAeDoRIHaA'
 
+let valueButton
+getValueInput=()=>{
+    document.querySelector('#input-value').value
+}
+
+getLabelDisplayValue=()=>{
+    document.querySelector('#label-value').innerHTML
+}
+
+getConvertType=()=>{
+    document.querySelector('#select-type').value
+}
+
+getClickOnPressedButton=()=>{
+    // let valueButton
+    let listButton = document.querySelectorAll('.buttons-letters .row div')
+    for(const button of listButton){
+        button.addEventListener('click', e=>{
+            valueButton = button.innerText
+        })
+    }
+}
+
 
 // Pegar o tipo de conversão (pelo select). EX: Decimal - Binário
-document.querySelector('#field-value').addEventListener('input', e=>{
-    if(!document.querySelector('#field-value').value == '') {
-        toConvert()
+document.querySelector('#input-value').addEventListener('input', e=>{
+    if(!document.querySelector('#input-value').value == '') {
+        // toConvert()
     } else {
-        setLabelValue('0')
+        // setLabelValue('0')
     }
 })
 
