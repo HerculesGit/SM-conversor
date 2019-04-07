@@ -107,6 +107,7 @@
 
 .row div:hover {
     background-color: #1CBC9D;
+    color: white;
     cursor: pointer;
 }
 
