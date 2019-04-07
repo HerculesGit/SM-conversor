@@ -127,6 +127,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     width: 55%;
+    background-color: #fff;
     
 }
 .card-top-video, .card-top-conversor{
