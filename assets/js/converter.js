@@ -92,6 +92,47 @@ isEmptyInputValue=()=>{
     return getInputValue() === ''
 }
 
+// ===========================================
+// converter valor
+toConvert =() => {
+    
+    if(validarEntrada()){
+        if(d_b == getConvertType()){
+            decimalToBinary(getInputValue())
+        } else if (b_d == getConvertType()){
+            binaryToDecimal(getInputValue())
+        } else if (d_h == getConvertType()){
+            decimalToHexadecimal(getInputValue())
+        } else if (h_d == getConvertType()){
+            hexadecimalToDecimal(getInputValue())
+        }
+    }
+}
+
+// funções para converter
+// ================ DECIMAL E BINÁRIO ================ 
+decimalToBinary = (value) => {
+    let binary = parseInt(value).toString(2)
+    return binary
+}
+
+binaryToDecimal=(value)=>{
+    let decimal = parseInt(value, 2)
+    return decimal
+}
+
+// ================ DECIMAL E HEXADECIMAL ================ 
+decimalToHexadecimal= (value) =>{
+    let hexadecimal = parseInt(value).toString(16)
+    return hexadecimal
+}
+
+hexadecimalToDecimal= (value) =>{
+    let decimal = parseInt(value, 16)
+    return decimal 
+}
+
+
 // Pegar o tipo de conversão (pelo select). EX: Decimal - Binário
 document.querySelector('#input-value').addEventListener('input', e=>{
     if(!document.querySelector('#input-value').value == '') {
