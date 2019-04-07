@@ -9,11 +9,19 @@ var url_b_d = 'https://www.youtube.com/embed/UTAeDoRIHaA'
 
 let valueButton
 getInputValue=()=>{
-    return document.querySelector('#input-value').value
+    return getInput().value
 }
 
 getLabelDisplayValue=()=>{
     return document.querySelector('#label-value').innerHTML
+}
+
+getInput=()=>{
+    return document.querySelector('#input-value')
+}
+
+getLabelResult=()=>{
+    return document.querySelector('#label-value')
 }
 
 getConvertType=()=>{
@@ -28,6 +36,10 @@ getClickOnPressedButton=()=>{
             valueButton = button.innerText
         })
     }
+}
+
+setResultDisplay=(value)=>{
+    getLabelResult().innerText = value
 }
 
  // ============================================
@@ -95,18 +107,23 @@ isEmptyInputValue=()=>{
 // ===========================================
 // converter valor
 toConvert =() => {
-    
+    let result = ''
     if(validarEntrada()){
         if(d_b == getConvertType()){
-            decimalToBinary(getInputValue())
+            result = decimalToBinary(getInputValue())
+
         } else if (b_d == getConvertType()){
-            binaryToDecimal(getInputValue())
+            result = binaryToDecimal(getInputValue())
+
         } else if (d_h == getConvertType()){
-            decimalToHexadecimal(getInputValue())
+            result = decimalToHexadecimal(getInputValue())
+
         } else if (h_d == getConvertType()){
-            hexadecimalToDecimal(getInputValue())
+            result = hexadecimalToDecimal(getInputValue())
         }
     }
+    setResultDisplay(result)
+    console.log('s' + result)
 }
 
 // funções para converter
@@ -132,15 +149,13 @@ hexadecimalToDecimal= (value) =>{
     return decimal 
 }
 
+run=()=>{
+    getInput().addEventListener('input', e=>{
+        toConvert()
+    })
+}
 
-// Pegar o tipo de conversão (pelo select). EX: Decimal - Binário
-document.querySelector('#input-value').addEventListener('input', e=>{
-    if(!document.querySelector('#input-value').value == '') {
-        // toConvert()
-    } else {
-        // setLabelValue('0')
-    }
-})
+run()
 
 /*
 document.querySelector('select').addEventListener('change', event=>{
