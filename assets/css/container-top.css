@@ -17,14 +17,18 @@
     color: #1CBC9D;
 }
 
+body {
+    width: 90%;
+    margin: auto;
+}
 
 /* card-top-conversor */
 .content-container-top {
     display: flex;
     flex-direction: row;
-    width: 1130px;
+    margin: auto;
     height: 550px;
-    justify-content: space-evenly;
+    justify-content: space-between;
     /* align-items: center; */
     /* background-color: #707070; */
 }
