@@ -8,6 +8,7 @@
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="assets/css/home.css"> -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/container-top.css">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/container-center.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/container-bottom.css">
 </head>
 <body>
 
@@ -73,6 +74,41 @@
     <!-- passo a passo -->
     <div class="content-container-center">
         <h2 id="pap">Passo a Passo</h2>
+    </div>
+
+    <!-- informação e contato -->
+    <div class="content-container-bottom">
+        <div class="info">
+            
+            <h2>sm Conversor</h2>
+            <div>
+                <p>Lorem Ipsum is simply dummy text of the printing and 
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an
+                    unknown printer took a galley of type and scrambled 
+                    it to make a type specimen book. It has survived not 
+                    only five centuries, but also the leap into electronic 
+                    typesetting, remaining essentially unchanged. It was popularised
+                    in the 1960s with the release of Letraset sheets containing Lorem
+                    Ipsum passages, and more recently with desktop publishing software 
+                    like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Contato -->
+        <div class="contact">
+
+            <form id="form-contact" action="/contact" method="POST">
+                <div><input id="name" type="text" placeholder="Nome" required="required"></div>
+                <div><input id="email" type="email" placeholder="Email" required="required"></div>
+                <div class="div-msg"><label id="msg">Mensagem *</label></div>
+                <div><textarea required="required" rows="6" cols="30"></textarea></div>
+                <div><button id="btn-submit">Enviar mensagem</button></div>
+            
+            </form>
+        </div>
     </div>
 
     <!-- <script src="assets/js/converter.js"></script> -->
