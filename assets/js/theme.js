@@ -1,5 +1,6 @@
 let orangeDark = '#E94B3E'
 let blackDark = '#232323'
+let bodyBackground = '#BEC3C7'
 let white = '#fff'
 let transparent = 'transparent'
 
@@ -13,6 +14,9 @@ getHeaderBackgroundColor=()=>{
 
 changeTheme=()=>{
     document.querySelector('#circle-dark').addEventListener('click', e=>{
+
+        document.querySelector('body').style.backgroundColor = bodyBackground
+
         document.querySelector('.main-header').style.backgroundColor = blackDark
         
         document.querySelector('.card-top-conversor').style.backgroundColor = blackDark
@@ -26,7 +30,7 @@ changeTheme=()=>{
         document.querySelector('.contact').style.backgroundColor = blackDark
         
 
-        document.querySelector('#input-value').style.borderBottom = '0 1px 0 0 #fff'
+        document.querySelector('#input-value').style.borderBottom = '1px solid #fff'
         
         document.querySelector('#input-value').style.color = '#fff'
 
@@ -36,6 +40,9 @@ changeTheme=()=>{
         document.querySelectorAll('.row .l')
 
         document.querySelector('body').style.color = white
+
+        document.querySelector('.contact button').style.backgroundColor = orangeDark
+
 
         addEventMouseButtonCalc()
         addColorButtonCalc()
