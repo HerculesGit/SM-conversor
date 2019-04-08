@@ -42,6 +42,8 @@ getClickOnPressedButton=()=>{
     for(const button of listButton){
         button.addEventListener('click', e=>{
             valueButton = button.innerText
+            getInput().value+= valueButton
+            toConvert()
         })
     }
 }
@@ -161,6 +163,7 @@ hexadecimalToDecimal= (value) =>{
 
 run=()=>{
     convertToTypeExchange()
+    getClickOnPressedButton()
     getInput().addEventListener('input', e=>{
         toConvert()
     })
