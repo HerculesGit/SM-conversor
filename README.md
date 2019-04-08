@@ -19,7 +19,7 @@ SM-Conversor é uma calculadora de conversão de bases numéricas ainda em desel
         Hexadecimal - Decimal
 
 ## Getting Started
-Baixa o projeto usando o git 
+Baixe o projeto usando o git 
 ```
 git clone https://github.com/HerculesGit/sm-conversor.git
 ```
