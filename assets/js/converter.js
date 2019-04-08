@@ -8,6 +8,14 @@ var url_d_b = 'https://www.youtube.com/embed/a8EaaCfa9hk'
 var url_b_d = 'https://www.youtube.com/embed/UTAeDoRIHaA'
 
 let valueButton
+let valueCurrentTypeConvert
+
+convertToTypeExchange=()=>{
+    document.querySelector('#select-type').addEventListener('change', e=>{
+        toConvert()
+    })
+}
+
 getInputValue=()=>{
     return getInput().value
 }
@@ -47,6 +55,8 @@ setResultDisplay=(value)=>{
 validarEntrada=()=> {
     let typeConvert = getConvertType()
     let inputValue = getInputValue()
+    if(inputValue === '') return false
+
     if(typeConvert === d_b || typeConvert == d_h) {
         return isNumber(inputValue)
     } else if (typeConvert == b_d) {
@@ -150,6 +160,7 @@ hexadecimalToDecimal= (value) =>{
 }
 
 run=()=>{
+    convertToTypeExchange()
     getInput().addEventListener('input', e=>{
         toConvert()
     })
