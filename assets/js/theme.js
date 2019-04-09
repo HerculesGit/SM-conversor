@@ -32,7 +32,7 @@ setLightTheme=()=>{
 
     document.querySelector('#input-value').style.borderBottom = '1px solid #fff'
     
-    document.querySelector('#input-value').style.color = '#fff'
+    document.querySelector('#input-value').style.color = '#000'
 
     document.querySelector('#label-value').style.color = greenLight
     
