@@ -145,7 +145,7 @@ addEventMouseButtonCalcLight=()=>{
 
 changeTheme=(theme)=>{
 
-    console.log('>'+theme)
+    // console.log('>'+theme)
 
     if(theme === 'dark'){
         setDarkTheme()
