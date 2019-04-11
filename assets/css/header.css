@@ -16,9 +16,21 @@ header{
 }
 
 .circles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     right: 15px;
     top: 15px;
+    height: 2rem;
+    width: 2rem;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.light-dark {
+    font-size: 2rem;
+    border: 1px solid #707070;
 }
 
 .main-header {
@@ -26,14 +38,14 @@ header{
     box-shadow: 0px 2px 5px gray;
 }
 
-#circle-light {
+/* #circle-light {
     background-color: #1CBC9D;
 }
 #circle-dark {
     background-color: #E94B3E;
-}
+} */
 
 /* hover */
-.circle:hover {
+.circles:hover {
     cursor: pointer;
 }

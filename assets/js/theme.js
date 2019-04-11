@@ -13,6 +13,7 @@ let currentTheme = undefined
 let white = '#fff'
 let transparent = 'transparent'
 
+let isLight = true
 
 setLightTheme=()=>{
     document.querySelector('body').style.backgroundColor = bodyBackgroundLight
@@ -153,12 +154,20 @@ changeTheme=(theme)=>{
     }
 }
 
-document.querySelector('#circle-dark').addEventListener('click', e=>{
-    changeTheme('dark')
+document.querySelector('.circles').addEventListener('click', e=>{
+    if(isLight){ // deixar dark
+        changeTheme('dark')
+        isLight = false
+    } else { // deixar light
+        changeTheme('light')
+        isLight = true
+    }
+    console.log('>>>')
+    
 })
-document.querySelector('#circle-light').addEventListener('click', e=>{
-    changeTheme('light')
-})
+// document.querySelector('#circle-light').addEventListener('click', e=>{
+//     changeTheme('light')
+// })
 
 
 // changeTheme()
