@@ -171,6 +171,125 @@ run=()=>{
 
 run()
 
+let paragrafo = document.querySelector('.content-container-center')
+
+// Binário decimal
+let binDec = `
+    <h2>Passo a Passo</h2>
+    <h3>Binário - Decimal</h3>
+    <p>
+    O sistema binário só possui 2 algarismos. 
+    Cada posição tem um peso de uma potência de 2 (base do sistema binário). 
+    Sendo assim, para se converter um número de binário para decimal, deve-se multiplicar 
+    cada bit pela potência de sua posição e somar os resultados. Simples assim!
+    </p>
+
+    <table>
+        <!--Linha 1 -->
+        <tr>
+            <td><p><strong>Binário</strong></p></td> 
+            <td><p>1</p></td>
+            <td><p>0</p></td>
+            <td><p>1</p></td>
+            <td><p>1</p></td>
+        <tr>
+        <!--Linha 2 -->
+        <tr>
+            <td rowspan="2"><p><strong>Valor da oposição</strong></p></td>
+            <td><p>1X2<sup>3</sup></p></td>
+            <td><p>0X2<sup>2</sup></p></td>
+            <td><p>1X2<sup>1</sup></p></td>
+            <td><p>1X2<sup>0</sup></p></td>
+        </tr>
+        <!--Linha 3 -->
+        <tr>
+            <td><p>8</p></td>
+            <td><p>0</p></td>
+            <td><p>2</p></td>
+            <td><p>1</p></td>
+        </tr>
+
+        <tr>
+            <td><p><strong>Resultado</strong></p></td> 
+            <td colspan="4"><p>(8 + 0 + 2 + 1) = 11 decimal</p></td>
+        </tr>
+    </table>`
+
+
+//  Decimal - Binário
+let decBin = `
+    <h2>Passo a Passo</h2>
+    <h3>Binário - Decimal</h3>
+    <p>Para realizar a conversão de decimal para binário, realiza-se a divisão sucessiva por 2 (base do sistema binário). 
+    O resultado da conversão será dado pelo último quociente (MSB) e o agrupamento dos restos de divisão será o número binário.<br></p>
+    
+    <p>Por exemplo, vamos converter o número 45 em binário:<br></p>
+    
+    <img src="https://www.embarcados.com.br/wp-content/uploads/2016/07/decimal-bin%C3%A1rio.jpg"/>
+    
+    <p>A leitura do resultado é feita do último quociente para o primeiro resto. 
+    Sendo assim, o resultado da conversão do número 45 para binário é: 101101<sub>2</sub></p>
+    `
+
+
+//  Decimal - Hexadecimal
+let decHex = `
+    <h2>Passo a Passo</h2>
+    <h3>Binário - Decimal</h3>
+    <p>
+    Para converter um número decimal em hexadecimal realiza-se a divisão 
+    sucessiva por 16 (base do sistema hexadecimal), semelhante à conversão de decimal para binário. 
+    <br></p>
+    <p>Por exemplo, vamos converter o número 438 em hexadecimal:<br></p>
+    
+    <img src="https://www.embarcados.com.br/wp-content/uploads/2016/07/decimal-hexadecimal.jpg"/>
+    
+    <p>O resultado é lido da direita para a esquerda a partir do último quociente. 
+    Assim. 438 é igual a 1B6<sub>16</sub></p>
+
+    <p>Note que o resto da segunda divisão foi o número 11, que corresponde ao número B em Hexadecimal.</p>
+
+    `
+
+// Hexadecimal - Binário 
+let hexDec = `
+    <h2>Passo a Passo</h2>
+    <h3>Binário - Decimal</h3>
+    <p>
+    A conversão de hexadecimal para decimal segue o mesmo princípio apresentado para o sistema binário. 
+    Multiplica-se cada dígito pela potência de 16 relativa à posição e somam-se os resultados: 
+    </p>
+
+    <table>
+        <!--Linha 1 -->
+        <tr>
+            <td><p><strong>Hexadecimal</strong></p></td> 
+            <td><p>1</p></td>
+            <td><p>2</p></td>
+            <td><p>C</p></td>
+        <tr>
+        <!--Linha 2 -->
+        <tr>
+            <td rowspan="2"><p><strong>Valor da oposição</strong></p></td>
+            <td><p>1X16<sup>2</sup></p></td>
+            <td><p>2X16<sup>1</sup></p></td>
+            <td><p>12X16<sup>0</sup></p></td>
+        </tr>
+        <!--Linha 3 -->
+        <tr>
+            <td><p>256</p></td>
+            <td><p>32</p></td>
+            <td><p>12</p></td>
+        </tr>
+
+        <!--Linha 4 -->
+        <tr>
+            <td><p><strong>Resultado</strong></p></td> 
+            <td colspan="4"><p>(256 + 32 + 121) = 300 decimal</p></td>
+        </tr>
+    </table>`
+paragrafo.innerHTML = hexDec
+    
 /*
 document.querySelector('select').addEventListener('change', event=>{
     let type= document.querySelector('option:checked').text
