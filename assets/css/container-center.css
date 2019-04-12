@@ -1,26 +1,25 @@
 .content-container-center {
-    height: 650px;
+    padding: 2rem;
+    height: auto;
     margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     border-radius: 15px;
     box-shadow: 1px 1px 5px gray;
     background-color: #fff;
 }
 
-.content-container-center h2 {
-    padding-top: 2rem;
-    padding-left: 2rem;
-}
-.info h2 {
-    padding-left: 30px;
-    padding-top: 30px;
-    /* margin-top: 30px; */
-}
-
 table {
+    width: 100%;
     border-collapse: collapse;
     border-spacing: 0px;
 }
 table, th, td{
     padding: 5px;
     border: 1px solid black;
+}
+
+.content-container-center img {
+    /* max-width: 100px; */
+    max-height: 250px;
 }

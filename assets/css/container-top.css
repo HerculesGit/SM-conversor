@@ -122,6 +122,7 @@ body {
 
 /* Vídeo */
 .card-top-video {
+    margin-left: 2rem;
     align-items: center;
     display: flex;
     flex-direction: row;
