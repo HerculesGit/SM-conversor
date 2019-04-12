@@ -13,6 +13,18 @@ let valueCurrentTypeConvert
 convertToTypeExchange=()=>{
     document.querySelector('#select-type').addEventListener('change', e=>{
         toConvert()
+        if(d_b == getConvertType()){
+            changeStepByStep(decBin)
+
+        } else if (b_d == getConvertType()){
+            changeStepByStep(binDec)
+
+        } else if (d_h == getConvertType()){
+            changeStepByStep(decHex)
+
+        } else if (h_d == getConvertType()){
+            changeStepByStep(hexDec)
+        }
     })
 }
 
@@ -161,6 +173,11 @@ hexadecimalToDecimal= (value) =>{
     return decimal 
 }
 
+changeStepByStep=(type)=>{
+    let paragrafo = document.querySelector('.content-container-center')
+    paragrafo.innerHTML = type
+}
+
 run=()=>{
     convertToTypeExchange()
     getClickOnPressedButton()
@@ -171,7 +188,7 @@ run=()=>{
 
 run()
 
-let paragrafo = document.querySelector('.content-container-center')
+
 
 // Binário decimal
 let binDec = `
@@ -219,7 +236,7 @@ let binDec = `
 //  Decimal - Binário
 let decBin = `
     <h2>Passo a Passo</h2>
-    <h3>Binário - Decimal</h3>
+    <h3>Decimal - Binário</h3>
     <p>Para realizar a conversão de decimal para binário, realiza-se a divisão sucessiva por 2 (base do sistema binário). 
     O resultado da conversão será dado pelo último quociente (MSB) e o agrupamento dos restos de divisão será o número binário.<br></p>
     
@@ -235,7 +252,7 @@ let decBin = `
 //  Decimal - Hexadecimal
 let decHex = `
     <h2>Passo a Passo</h2>
-    <h3>Binário - Decimal</h3>
+    <h3>Decimal - Hexadecimal</h3>
     <p>
     Para converter um número decimal em hexadecimal realiza-se a divisão 
     sucessiva por 16 (base do sistema hexadecimal), semelhante à conversão de decimal para binário. 
@@ -254,7 +271,7 @@ let decHex = `
 // Hexadecimal - Binário 
 let hexDec = `
     <h2>Passo a Passo</h2>
-    <h3>Binário - Decimal</h3>
+    <h3>Hexadecimal- Decimal</h3>
     <p>
     A conversão de hexadecimal para decimal segue o mesmo princípio apresentado para o sistema binário. 
     Multiplica-se cada dígito pela potência de 16 relativa à posição e somam-se os resultados: 
@@ -288,7 +305,6 @@ let hexDec = `
             <td colspan="4"><p>(256 + 32 + 121) = 300 decimal</p></td>
         </tr>
     </table>`
-paragrafo.innerHTML = hexDec
     
 /*
 document.querySelector('select').addEventListener('change', event=>{
