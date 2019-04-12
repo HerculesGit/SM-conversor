@@ -188,17 +188,6 @@ changeVideo=(url)=>{
     document.querySelector('iframe').src = url
 }
 
-run=()=>{
-    convertToTypeExchange()
-    getClickOnPressedButton()
-    getInput().addEventListener('input', e=>{
-        toConvert()
-    })
-}
-
-run()
-
-
 
 // Binário decimal
 let binDec = `
@@ -315,7 +304,17 @@ let hexDec = `
             <td colspan="4"><p>(256 + 32 + 121) = 300 decimal</p></td>
         </tr>
     </table>`
-    
+
+run=()=>{
+    convertToTypeExchange()
+    getClickOnPressedButton()
+    getInput().addEventListener('input', e=>{
+        toConvert()
+    })
+    changeStepByStep(decBin)
+}
+
+run()
 /*
 document.querySelector('select').addEventListener('change', event=>{
     let type= document.querySelector('option:checked').text
