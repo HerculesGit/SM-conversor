@@ -1,11 +1,13 @@
 
-var d_b = 'd-b'
-var b_d = 'b-d'
-var d_h = 'd-h'
-var h_d = 'h-d'
+let d_b = 'd-b'
+let b_d = 'b-d'
+let d_h = 'd-h'
+let h_d = 'h-d'
 
-var url_d_b = 'https://www.youtube.com/embed/a8EaaCfa9hk'
-var url_b_d = 'https://www.youtube.com/embed/UTAeDoRIHaA'
+let url_d_b = 'https://www.youtube.com/embed/a8EaaCfa9hk' // pulse start
+let url_b_d = 'https://www.youtube.com/embed/UTAeDoRIHaA' // godot
+let url_d_h = 'https://www.youtube.com/embed/34K8YJOMDRY' // unity 3d
+let url_h_d = 'https://www.youtube.com/embed/Um4HFzAewIg' // construct 3
 
 let valueButton
 let valueCurrentTypeConvert
@@ -15,15 +17,19 @@ convertToTypeExchange=()=>{
         toConvert()
         if(d_b == getConvertType()){
             changeStepByStep(decBin)
+            changeVideo(url_d_b)
 
         } else if (b_d == getConvertType()){
             changeStepByStep(binDec)
+            changeVideo(url_b_d)
 
         } else if (d_h == getConvertType()){
             changeStepByStep(decHex)
+            changeVideo(url_d_h)
 
         } else if (h_d == getConvertType()){
             changeStepByStep(hexDec)
+            changeVideo(url_h_d)
         }
     })
 }
@@ -176,6 +182,10 @@ hexadecimalToDecimal= (value) =>{
 changeStepByStep=(type)=>{
     let paragrafo = document.querySelector('.content-container-center')
     paragrafo.innerHTML = type
+}
+
+changeVideo=(url)=>{
+    document.querySelector('iframe').src = url
 }
 
 run=()=>{
@@ -513,9 +523,7 @@ function isEmpty(){
 }
 
 
-changeVideo=(url)=>{
-    document.querySelector('iframe').src = url
-}
+
 
 // load
 setDefaultState=()=>{
