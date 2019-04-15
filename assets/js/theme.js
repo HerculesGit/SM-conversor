@@ -44,6 +44,9 @@ setLightTheme=()=>{
 
     document.querySelector('.contact button').style.backgroundColor = greenLight
 
+    document.querySelector('#email').style.webkitTextFillColor = "black"
+    document.querySelector('#name').style.webkitTextFillColor = "black"
+
 
     addEventMouseButtonCalcLight()
     addColorButtonCalcLight()
@@ -76,6 +79,9 @@ setDarkTheme=()=>{
     document.querySelector('body').style.color = white
 
     document.querySelector('.contact button').style.backgroundColor = orangeDark
+
+    document.querySelector('#email').style.webkitTextFillColor = "white"
+    document.querySelector('#name').style.webkitTextFillColor = "white"
 
 
     addEventMouseButtonCalc()
