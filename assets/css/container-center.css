@@ -23,3 +23,15 @@ table, th, td{
     /* max-width: 100px; */
     max-height: 250px;
 }
+
+/* ====== responsividade ====== */
+/* Quando o tamanho máximo da tela for menor que 700px */
+@media screen and (max-width: 700px) {
+
+    .content-container-center img {
+        height: auto;
+        width: 30rem;
+    }
+
+
+}

@@ -74,3 +74,40 @@ input:focus {
 .contact button:hover {
     cursor: pointer;
 }
+
+
+/* ====== responsividade ====== */
+/* Quando o tamanho máximo da tela for menor que 700px */
+@media screen and (max-width: 700px) {
+
+    .content-container-bottom {
+        flex-direction: column;
+        /* width: 30rem; */
+    }
+    .info {
+        margin: 0px;
+        margin-bottom: 30px;
+    }
+
+    .contact {
+        margin: 0px;
+    }
+
+    #form-contact div {
+        width: 30rem;
+    }
+
+    #form-contact input{
+        width: 100%;
+        height: 100%;
+        margin: auto;
+    }
+
+    #form-contact div textarea {
+        width: 100%;
+        height: 100%;
+        max-width: 30rem;
+    }
+
+
+}

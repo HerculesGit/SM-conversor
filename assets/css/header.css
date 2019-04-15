@@ -24,8 +24,8 @@ header{
     top: 15px;
     height: 2rem;
     width: 2rem;
-    border: 1px solid black;
-    border-radius: 50%;
+    /* border: 1px solid black; */
+    /* border-radius: 50%; */
 }
 
 .light-dark {
