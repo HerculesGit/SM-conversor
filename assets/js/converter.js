@@ -39,7 +39,7 @@ getInputValue=()=>{
 }
 
 getLabelDisplayValue=()=>{
-    return document.querySelector('#label-value').innerHTML
+    return document.querySelector('#label-value').value
 }
 
 getInput=()=>{
@@ -67,7 +67,7 @@ getClickOnPressedButton=()=>{
 }
 
 setResultDisplay=(value)=>{
-    getLabelResult().innerText = value
+    getLabelResult().value = value
 }
 
  // ============================================

@@ -36,7 +36,8 @@ setLightTheme=()=>{
     document.querySelector('#input-value').style.color = '#000'
 
     document.querySelector('#label-value').style.color = greenLight
-    
+
+    document.querySelector('#label-value').style.backgroundColor = white
     
     document.querySelectorAll('.row .l')
 
@@ -72,6 +73,8 @@ setDarkTheme=()=>{
     document.querySelector('#input-value').style.color = '#fff'
 
     document.querySelector('#label-value').style.color = orangeDark
+
+    document.querySelector('#label-value').style.backgroundColor = blackDark
     
     
     document.querySelectorAll('.row .l')

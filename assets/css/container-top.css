@@ -15,6 +15,7 @@
 #label-value {
     font-size: 2.3rem;
     color: #1CBC9D;
+    border: none
 }
 
 body {
@@ -64,7 +65,7 @@ body {
     color: #fff;
 }
 
-.input-out, .conversion-type, #select-type, #input-value  {
+.input-out, .conversion-type, #select-type, #input-value, #label-value  {
     width: 90%;
 }
 
