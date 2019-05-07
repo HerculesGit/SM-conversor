@@ -27,6 +27,7 @@ animationProgressBar =()=>{
 
                 fadeOut('.progress', 0.1)
                 fadeOut('.container-bar-progress', 1.2)
+                fadeOut('.gif-logo', 0.2)
 
                 setTimeout(() => {
                     goToPage()

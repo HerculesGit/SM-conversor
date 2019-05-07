@@ -38,6 +38,17 @@ header{
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
+.logo{
+    width: 3.1rem;
+    height: 3.1rem;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 0.2rem;
+}
+
+.logo img{
+    width: 100%;
+}
 /* #circle-light {
     background-color: #1CBC9D;
 }

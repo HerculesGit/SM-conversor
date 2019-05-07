@@ -2,7 +2,7 @@
 /* para animacao */
 #bar {
   position: absolute;
-  top: 50%;
+  top: 93%;
   left: 25%;
   background-color: white;
   width: 0%;
@@ -34,4 +34,19 @@
   color: white;
   font-family: 'Courier New', Courier, monospace;
   font-size: 1.5rem;
+}
+
+.gif-logo {
+  top: 89.1%;
+  left: 21%;
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  overflow: hidden;
+  margin: auto;
+}
+
+.gif-logo img{
+  position: absolute;
+  width: 100%;
 }
