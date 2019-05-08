@@ -50,3 +50,31 @@
   position: absolute;
   width: 100%;
 }
+
+/* ====== responsividade ====== */
+/* Quando o tamanho máximo da tela for menor que 700px */
+
+@media screen and (max-width: 1190px) {
+
+  .gif-logo {
+    left: 19%;
+  }
+
+
+}
+
+@media screen and (max-width: 862px) {
+
+  .gif-logo {
+    left: 13%;
+  }
+
+}
+
+
+@media screen and (max-width: 370px) {
+
+  .gif-logo {
+    left: 7%;
+  }
+}
