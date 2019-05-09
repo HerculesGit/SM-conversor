@@ -4,10 +4,10 @@ let b_d = 'b-d'
 let d_h = 'd-h'
 let h_d = 'h-d'
 
-let url_d_b = 'https://www.youtube.com/embed/a8EaaCfa9hk' // pulse start
-let url_b_d = 'https://www.youtube.com/embed/UTAeDoRIHaA' // godot
-let url_d_h = 'https://www.youtube.com/embed/34K8YJOMDRY' // unity 3d
-let url_h_d = 'https://www.youtube.com/embed/Um4HFzAewIg' // construct 3
+let url_d_b = 'https://www.youtube.com/embed/9ZWF_LvOndE' // pulse start - dec2bin
+let url_b_d = 'https://www.youtube.com/embed/mYqyRLLYIBY' // godot - bin2dec
+let url_d_h = 'https://www.youtube.com/embed/yBQWolsJrm4' // unity 3d - dec2hex
+let url_h_d = 'https://www.youtube.com/embed/G0eicia4Ji8' // construct 3 - hex2dec
 
 let valueButton
 let valueCurrentTypeConvert
